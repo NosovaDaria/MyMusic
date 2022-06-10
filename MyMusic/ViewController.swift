@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        view.backgroundColor = .orange
+        view.backgroundColor = .white
     }
 
 
