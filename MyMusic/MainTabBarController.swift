@@ -14,6 +14,8 @@ class MainTabBarController: UITabBarController {
         
         view.backgroundColor = .white
         
+        tabBar.tintColor = UIColor(named: "myPink")
+        
         viewControllers = [
             generateViewController(rootViewController: SearchViewController(), image: UIImage(named: "search")!, title: "Search"),
             generateViewController(rootViewController: ViewController(), image: UIImage(named: "library")!, title: "Library")
