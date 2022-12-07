@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B2D3B0C29410FAA001A1E02 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2D3B0B29410FAA001A1E02 /* NetworkManager.swift */; };
 		4B3407C22940C6F900158B20 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3407C12940C6F900158B20 /* SearchResponse.swift */; };
 		4BFBAAB828213CC9004FFE5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFBAAB728213CC9004FFE5A /* AppDelegate.swift */; };
 		4BFBAABA28213CC9004FFE5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFBAAB928213CC9004FFE5A /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1AA2C401BB1A735BE3F81B1D /* Pods-MyMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMusic.release.xcconfig"; path = "Target Support Files/Pods-MyMusic/Pods-MyMusic.release.xcconfig"; sourceTree = "<group>"; };
+		4B2D3B0B29410FAA001A1E02 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4B3407C12940C6F900158B20 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		4BFBAAB428213CC9004FFE5A /* MyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFBAAB728213CC9004FFE5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				4BFBAABB28213CC9004FFE5A /* ViewController.swift */,
 				4BFBAACB28213D37004FFE5A /* MainTabBarController.swift */,
 				4BFBAACD28213FDA004FFE5A /* SearchViewController.swift */,
+				4B2D3B0B29410FAA001A1E02 /* NetworkManager.swift */,
 				4B3407C12940C6F900158B20 /* SearchResponse.swift */,
 				4BFBAABD28213CC9004FFE5A /* Main.storyboard */,
 				4BFBAAC028213CC9004FFE5A /* Assets.xcassets */,
@@ -218,6 +221,7 @@
 				4BFBAACE28213FDA004FFE5A /* SearchViewController.swift in Sources */,
 				4BFBAABC28213CC9004FFE5A /* ViewController.swift in Sources */,
 				4B3407C22940C6F900158B20 /* SearchResponse.swift in Sources */,
+				4B2D3B0C29410FAA001A1E02 /* NetworkManager.swift in Sources */,
 				4BFBAAB828213CC9004FFE5A /* AppDelegate.swift in Sources */,
 				4BFBAACC28213D37004FFE5A /* MainTabBarController.swift in Sources */,
 				4BFBAABA28213CC9004FFE5A /* SceneDelegate.swift in Sources */,
