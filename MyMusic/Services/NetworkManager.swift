@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 class NetworkService {
-    func fetchTasks(searchText: String, completion: @escaping(SearchResponse?) -> Void) {
+    func fetchTracks(searchText: String, completion: @escaping(SearchResponse?) -> Void) {
         let url = "https://itunes.apple.com/search"
         let parameters = ["term":"\(searchText)",
                           "limit":"10",
