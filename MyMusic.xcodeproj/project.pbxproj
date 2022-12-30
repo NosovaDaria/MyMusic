@@ -19,6 +19,7 @@
 		4B61EB222959A9BD005EF3CF /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61EB212959A9BD005EF3CF /* UIViewController + Storyboard.swift */; };
 		4B61EB26295AEABE005EF3CF /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B61EB25295AEABE005EF3CF /* TrackCell.xib */; };
 		4B61EB28295AEAE1005EF3CF /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61EB27295AEAE1005EF3CF /* TrackCell.swift */; };
+		4BDE2D82295D9D4100C67496 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDE2D81295D9D4100C67496 /* FooterView.swift */; };
 		4BFBAAB828213CC9004FFE5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFBAAB728213CC9004FFE5A /* AppDelegate.swift */; };
 		4BFBAABA28213CC9004FFE5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFBAAB928213CC9004FFE5A /* SceneDelegate.swift */; };
 		4BFBAABC28213CC9004FFE5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFBAABB28213CC9004FFE5A /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		4B61EB212959A9BD005EF3CF /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
 		4B61EB25295AEABE005EF3CF /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		4B61EB27295AEAE1005EF3CF /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		4BDE2D81295D9D4100C67496 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		4BFBAAB428213CC9004FFE5A /* MyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFBAAB728213CC9004FFE5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BFBAAB928213CC9004FFE5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		4B61EB0129598C09005EF3CF /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				4BDE2D80295D9D2100C67496 /* FooterView */,
 				4B61EB24295AEA90005EF3CF /* Cell */,
 				4B61EB1F2959A38A005EF3CF /* SearchViewController.storyboard */,
 				4B61EB1529598D48005EF3CF /* SearchViewController.swift */,
@@ -117,6 +120,14 @@
 				4B61EB27295AEAE1005EF3CF /* TrackCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		4BDE2D80295D9D2100C67496 /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				4BDE2D81295D9D4100C67496 /* FooterView.swift */,
+			);
+			path = FooterView;
 			sourceTree = "<group>";
 		};
 		4BFBAAAB28213CC9004FFE5A = {
@@ -295,6 +306,7 @@
 				4BFBAABC28213CC9004FFE5A /* ViewController.swift in Sources */,
 				4B3407C22940C6F900158B20 /* SearchResponse.swift in Sources */,
 				4B61EB1D29598D48005EF3CF /* SearchInteractor.swift in Sources */,
+				4BDE2D82295D9D4100C67496 /* FooterView.swift in Sources */,
 				4B61EB28295AEAE1005EF3CF /* TrackCell.swift in Sources */,
 				4B2D3B0C29410FAA001A1E02 /* NetworkManager.swift in Sources */,
 				4BFBAAB828213CC9004FFE5A /* AppDelegate.swift in Sources */,
