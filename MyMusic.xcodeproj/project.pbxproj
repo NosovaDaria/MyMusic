@@ -20,6 +20,8 @@
 		4B61EB26295AEABE005EF3CF /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B61EB25295AEABE005EF3CF /* TrackCell.xib */; };
 		4B61EB28295AEAE1005EF3CF /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61EB27295AEAE1005EF3CF /* TrackCell.swift */; };
 		4BDE2D82295D9D4100C67496 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDE2D81295D9D4100C67496 /* FooterView.swift */; };
+		4BDE2D85295EE2E700C67496 /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BDE2D84295EE2E700C67496 /* TrackDetailView.xib */; };
+		4BDE2D87295EE30500C67496 /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDE2D86295EE30500C67496 /* TrackDetailView.swift */; };
 		4BFBAAB828213CC9004FFE5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFBAAB728213CC9004FFE5A /* AppDelegate.swift */; };
 		4BFBAABA28213CC9004FFE5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFBAAB928213CC9004FFE5A /* SceneDelegate.swift */; };
 		4BFBAABC28213CC9004FFE5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFBAABB28213CC9004FFE5A /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		4B61EB25295AEABE005EF3CF /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		4B61EB27295AEAE1005EF3CF /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		4BDE2D81295D9D4100C67496 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		4BDE2D84295EE2E700C67496 /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
+		4BDE2D86295EE30500C67496 /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
 		4BFBAAB428213CC9004FFE5A /* MyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFBAAB728213CC9004FFE5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BFBAAB928213CC9004FFE5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		4B61EB0129598C09005EF3CF /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				4BDE2D83295EE2B600C67496 /* TrackDetailView */,
 				4BDE2D80295D9D2100C67496 /* FooterView */,
 				4B61EB24295AEA90005EF3CF /* Cell */,
 				4B61EB1F2959A38A005EF3CF /* SearchViewController.storyboard */,
@@ -128,6 +133,15 @@
 				4BDE2D81295D9D4100C67496 /* FooterView.swift */,
 			);
 			path = FooterView;
+			sourceTree = "<group>";
+		};
+		4BDE2D83295EE2B600C67496 /* TrackDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				4BDE2D84295EE2E700C67496 /* TrackDetailView.xib */,
+				4BDE2D86295EE30500C67496 /* TrackDetailView.swift */,
+			);
+			path = TrackDetailView;
 			sourceTree = "<group>";
 		};
 		4BFBAAAB28213CC9004FFE5A = {
@@ -248,6 +262,7 @@
 				4B61EB26295AEABE005EF3CF /* TrackCell.xib in Resources */,
 				4BFBAAC428213CC9004FFE5A /* LaunchScreen.storyboard in Resources */,
 				4BFBAAC128213CC9004FFE5A /* Assets.xcassets in Resources */,
+				4BDE2D85295EE2E700C67496 /* TrackDetailView.xib in Resources */,
 				4BFBAABF28213CC9004FFE5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +331,7 @@
 				4B61EB1B29598D48005EF3CF /* SearchModels.swift in Sources */,
 				4BFBAACC28213D37004FFE5A /* MainTabBarController.swift in Sources */,
 				4B61EB1829598D48005EF3CF /* SearchPresenter.swift in Sources */,
+				4BDE2D87295EE30500C67496 /* TrackDetailView.swift in Sources */,
 				4BFBAABA28213CC9004FFE5A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
