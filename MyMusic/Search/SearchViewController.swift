@@ -109,7 +109,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = table.dequeueReusableCell(withIdentifier: TrackCell.reuseId, for: indexPath) as! TrackCell
         let cellViewModel = searchViewModel.cells[indexPath.row]
 //        print("cellViewModel.previewUrl:", cellViewModel.previewUrl ?? "")
-        cell.trackImageView.backgroundColor = .red
+//        cell.trackImageView.backgroundColor = .red
         cell.set(viewModel: cellViewModel)
 
         return cell
@@ -121,6 +121,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         let window = UIApplication.shared.keyWindow
         let trackDetailsView = Bundle.main.loadNibNamed("TrackDetailView", owner: self)?.first as! TrackDetailView
+        trackDetailsView.set(viewModel: cellViewModel)
         window?.addSubview(trackDetailsView)
     }
     

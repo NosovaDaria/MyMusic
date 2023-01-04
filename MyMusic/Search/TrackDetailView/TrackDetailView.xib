@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -91,9 +92,9 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9i-t4-dsv">
-                                    <rect key="frame" x="110" y="57" width="110" height="73"/>
+                                    <rect key="frame" x="110" y="58" width="110" height="71"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="play"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="pause"/>
                                     <connections>
                                         <action selector="playPauseAction:" destination="1qg-kn-r5q" eventType="touchUpInside" id="nFj-kp-5m1"/>
                                     </connections>
@@ -137,7 +138,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fqA-ZG-X77"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fqA-ZG-X77" firstAttribute="bottom" secondItem="IJT-Ob-Teb" secondAttribute="bottom" constant="30" id="GLl-eM-Uby"/>
                 <constraint firstItem="fqA-ZG-X77" firstAttribute="trailing" secondItem="IJT-Ob-Teb" secondAttribute="trailing" constant="30" id="kVV-yo-OF4"/>
@@ -163,6 +164,9 @@
         <image name="IconMax" width="17" height="17"/>
         <image name="Left" width="34" height="20"/>
         <image name="Right" width="34" height="20"/>
-        <image name="play" width="59" height="59"/>
+        <image name="pause" width="57" height="57"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
