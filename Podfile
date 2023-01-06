@@ -1,4 +1,5 @@
 # Uncomment the next line to define a global platform for your project
+
 platform :ios, '15.2'
 
 target 'MyMusic' do
@@ -6,7 +7,9 @@ target 'MyMusic' do
   use_frameworks!
 
   # Pods for MyMusic
+
 pod 'Alamofire'
 pod 'SDWebImage', '~> 5.0'
+
 
 end
