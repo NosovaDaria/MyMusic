@@ -5,6 +5,7 @@
 //  Created by Дарья Носова on 03.05.2022.
 //
 
+import Alamofire
 import UIKit
 
 struct TrackModel {
@@ -12,12 +13,14 @@ struct TrackModel {
     var artistName: String
 }
 
-class SearchViewController: UITableViewController {
+class SearchMusicViewController: UITableViewController {
+    
+    var networkService = NetworkService()
+    private var timer: Timer?
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    let tracks = [TrackModel(trackName: "bad guy", artistName: "Billie Eilish"),
-                  TrackModel(trackName: "bury a friend", artistName: "Billie Eilish")]
+    var tracks = [Track]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,18 +48,23 @@ class SearchViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
         let track = tracks[indexPath.row]
-        cell.textLabel?.text = "\(track.trackName)\n\(track.artistName)"
+        cell.textLabel?.text = "\(track.trackName ?? "")\n\(track.artistName)"
         cell.textLabel?.numberOfLines = 2
         cell.imageView?.image = UIImage(named: "image")
         return cell
     }
-
-    
 }
 
-extension SearchViewController: UISearchBarDelegate {
+extension SearchMusicViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-    }
+        
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { _ in
+            self.networkService.fetchTracks(searchText: searchText) { [weak self] (searchResults) in
+                self?.tracks = searchResults?.results ?? []
+                self?.tableView.reloadData()
+            }
     
+        })
+    }
 }
