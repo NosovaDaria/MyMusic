@@ -47,7 +47,7 @@
                                     </constraints>
                                     <color key="tintColor" systemColor="labelColor"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="pause"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="play" imagePadding="0.0"/>
                                     <connections>
                                         <action selector="playPauseAction:" destination="1qg-kn-r5q" eventType="touchUpInside" id="5D3-oP-Erv"/>
                                     </connections>
@@ -156,7 +156,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9i-t4-dsv">
-                                    <rect key="frame" x="110" y="83" width="110" height="71"/>
+                                    <rect key="frame" x="110" y="92.333333333333258" width="110" height="52"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="pause"/>
                                     <connections>
@@ -238,7 +238,8 @@
         <image name="Left" width="34" height="20"/>
         <image name="Right" width="34" height="20"/>
         <image name="image" width="54.333332061767578" height="54.333332061767578"/>
-        <image name="pause" width="57" height="57"/>
+        <image name="pause" width="38" height="38"/>
+        <image name="play" width="39.333332061767578" height="39.333332061767578"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
