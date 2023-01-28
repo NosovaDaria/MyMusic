@@ -27,6 +27,7 @@ class TrackCell: UITableViewCell {
     
     @IBOutlet weak var collectionNameLabel: UILabel!
     
+    @IBOutlet weak var addTrackOutlet: UIButton!
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -36,7 +37,21 @@ class TrackCell: UITableViewCell {
         trackImageView.image = nil
     }
 
-    func set(viewModel: TrackCellViewModel) {
+    var cell: SearchViewModel.Cell?
+    
+    func set(viewModel: SearchViewModel.Cell) {
+        self.cell = viewModel
+        
+        let savedTracks = UserDefaults.standard.savedTracks()
+        let hasFavourite = savedTracks.firstIndex (where: {
+            $0.trackName == self.cell?.trackName && $0.artistName == self.cell?.artistName
+        }) != nil
+        if hasFavourite {
+            addTrackOutlet.isHidden = true
+        } else {
+            addTrackOutlet.isHidden = false
+        }
+        
         trackNameLabel.text = viewModel.trackName
         artistNameLabel.text = viewModel.artistName
         collectionNameLabel.text = viewModel.collectionName
@@ -44,8 +59,21 @@ class TrackCell: UITableViewCell {
         
         guard let url = URL(string: viewModel.iconUrlString ?? "") else { return }
         trackImageView.sd_setImage(with: url)
-        
     }
     
+    @IBAction func addTrackAction(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        guard let cell = cell else { return }
+        addTrackOutlet.isHidden = true
+        
+        var listOfTracks = defaults.savedTracks()
+        
+        listOfTracks.append(cell)
+        
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: listOfTracks, requiringSecureCoding: false) {
+            print("Good!")
+            defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
+        }
+    }
 }
 
