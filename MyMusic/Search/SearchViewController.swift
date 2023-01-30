@@ -9,12 +9,12 @@
 import UIKit
 
 protocol SearchDisplayLogic: AnyObject {
-  func displayData(viewModel: Search.Model.ViewModel.ViewModelData)
+    func displayData(viewModel: Search.Model.ViewModel.ViewModelData)
 }
 
 class SearchViewController: UIViewController, SearchDisplayLogic {
-
-  var interactor: SearchBusinessLogic?
+    
+    var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic)?
     
     
@@ -27,47 +27,47 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     
     private lazy var footerView = FooterView()
     weak var tabBarDelegate: MainTabBarControllerDelegate?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup() {
-    let viewController        = self
-    let interactor            = SearchInteractor()
-    let presenter             = SearchPresenter()
-    let router                = SearchRouter()
-    viewController.interactor = interactor
-    viewController.router     = router
-    interactor.presenter      = presenter
-    presenter.viewController  = viewController
-    router.viewController     = viewController
-  }
-  
-  // MARK: Routing
-  
-
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-      setup()
-      
-      setupTableView()
-      setupSearchBar()
-      searchBar(searchController.searchBar, textDidChange: "The Animals")
-  }
+    
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup() {
+        let viewController        = self
+        let interactor            = SearchInteractor()
+        let presenter             = SearchPresenter()
+        let router                = SearchRouter()
+        viewController.interactor = interactor
+        viewController.router     = router
+        interactor.presenter      = presenter
+        presenter.viewController  = viewController
+        router.viewController     = viewController
+    }
+    
+    // MARK: Routing
+    
+    
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+        
+        setupTableView()
+        setupSearchBar()
+        searchBar(searchController.searchBar, textDidChange: "The Animals")
+    }
     
     private func setupSearchBar() {
         navigationItem.searchController = searchController
@@ -83,21 +83,21 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         table.register(nib, forCellReuseIdentifier: TrackCell.reuseId)
         table.tableFooterView = footerView
     }
-  
-  func displayData(viewModel: Search.Model.ViewModel.ViewModelData) {
-      switch viewModel {
-          case .displayTracks(let searchViewModel):
-              print("viewController .displayTracks")
-              self.searchViewModel = searchViewModel
-              table.reloadData()
-              footerView.hideLoader()
-              print("footerView hided")
-          case .displayFooterView:
-              footerView.showLoader()
-      }
-
-  }
-  
+    
+    func displayData(viewModel: Search.Model.ViewModel.ViewModelData) {
+        switch viewModel {
+            case .displayTracks(let searchViewModel):
+                print("viewController .displayTracks")
+                self.searchViewModel = searchViewModel
+                table.reloadData()
+                footerView.hideLoader()
+                print("footerView hided")
+            case .displayFooterView:
+                footerView.showLoader()
+        }
+        
+    }
+    
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -110,10 +110,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: TrackCell.reuseId, for: indexPath) as! TrackCell
         let cellViewModel = searchViewModel.cells[indexPath.row]
-//        print("cellViewModel.previewUrl:", cellViewModel.previewUrl ?? "")
-//        cell.trackImageView.backgroundColor = .red
+        //        print("cellViewModel.previewUrl:", cellViewModel.previewUrl ?? "")
+        //        cell.trackImageView.backgroundColor = .red
         cell.set(viewModel: cellViewModel)
-
+        
         return cell
     }
     
@@ -123,11 +123,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         self.tabBarDelegate?.maximizeTrackDetailController(viewModel: cellViewModel)
         
-//        let window = UIApplication.shared.keyWindow
-//        let trackDetailsView: TrackDetailView = TrackDetailView.loadFromNib()
-//        trackDetailsView.set(viewModel: cellViewModel)
-//        trackDetailsView.delegate = self
-//        window?.addSubview(trackDetailsView)
+        //        let window = UIApplication.shared.keyWindow
+        //        let trackDetailsView: TrackDetailView = TrackDetailView.loadFromNib()
+        //        trackDetailsView.set(viewModel: cellViewModel)
+        //        trackDetailsView.delegate = self
+        //        window?.addSubview(trackDetailsView)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

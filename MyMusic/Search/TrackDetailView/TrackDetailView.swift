@@ -45,7 +45,7 @@ class TrackDetailView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         let scale = 0.8
         trackImageView.transform = CGAffineTransform(scaleX: scale, y: scale)
         
@@ -77,9 +77,9 @@ class TrackDetailView: UIView {
         addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismissalPan)))
     }
     
-
-    private func playTrack(previewUrl: String?) {
     
+    private func playTrack(previewUrl: String?) {
+        
         guard let url = URL(string: previewUrl ?? "") else { return }
         let playerItem = AVPlayerItem(url: url)
         player.replaceCurrentItem(with: playerItem)
@@ -89,7 +89,6 @@ class TrackDetailView: UIView {
     // MARK: - Maximizing and minimizing gestures
     
     @objc private func handleTapMaximized() {
-        print("tapping to max")
         self.tabBarDelegate?.maximizeTrackDetailController(viewModel: nil)
     }
     
@@ -204,7 +203,7 @@ class TrackDetailView: UIView {
     
     @IBAction func dragDownButtonTapped(_ sender: Any) {
         self.tabBarDelegate?.minimizeTrackDetailController()
-//        self.removeFromSuperview()
+        //        self.removeFromSuperview()
     }
     
     @IBAction func handleCurrentTimeSlider(_ sender: Any) {
@@ -246,5 +245,5 @@ class TrackDetailView: UIView {
         }
     }
     
-  
+    
 }

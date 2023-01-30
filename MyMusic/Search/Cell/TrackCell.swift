@@ -36,7 +36,7 @@ class TrackCell: UITableViewCell {
         
         trackImageView.image = nil
     }
-
+    
     var cell: SearchViewModel.Cell?
     
     func set(viewModel: SearchViewModel.Cell) {

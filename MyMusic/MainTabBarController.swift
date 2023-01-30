@@ -29,10 +29,11 @@ class MainTabBarController: UITabBarController {
         tabBar.tintColor = UIColor(named: "myPink")
         
         setupTrackDetailView()
-
+        
         searchVC.tabBarDelegate = self
         
-        let library = Library()
+        var library = Library()
+        library.tabBarDelegate = self
         let hostVC = UIHostingController(rootView: library)
         hostVC.tabBarItem.image = UIImage(named: "library")
         hostVC.tabBarItem.title = "Library"
@@ -54,7 +55,7 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupTrackDetailView() {
-
+        
         
         trackDetailView.tabBarDelegate = self
         trackDetailView.delegate = searchVC
@@ -71,7 +72,7 @@ class MainTabBarController: UITabBarController {
         bottomAnchorConstraint.isActive = true
         
         maximizedTopAnchorConstraint.isActive = true
-//        trackDetailView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        //        trackDetailView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         trackDetailView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         trackDetailView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         
@@ -93,10 +94,10 @@ extension MainTabBarController: MainTabBarControllerDelegate {
                        usingSpringWithDamping: 0.7,
                        initialSpringVelocity: 1,
                        options: .curveEaseInOut) {
-                        self.view.layoutIfNeeded()
-                        self.tabBar.alpha = 0
-                        self.trackDetailView.miniTrackView.alpha = 0
-                        self.trackDetailView.maximizedStackView.alpha = 1
+            self.view.layoutIfNeeded()
+            self.tabBar.alpha = 0
+            self.trackDetailView.miniTrackView.alpha = 0
+            self.trackDetailView.maximizedStackView.alpha = 1
         }
         guard let viewModel = viewModel else { return }
         self.trackDetailView.set(viewModel: viewModel)
@@ -111,10 +112,10 @@ extension MainTabBarController: MainTabBarControllerDelegate {
                        usingSpringWithDamping: 0.7,
                        initialSpringVelocity: 1,
                        options: .curveEaseInOut) {
-                        self.view.layoutIfNeeded()
-                        self.tabBar.alpha = 1
-                        self.trackDetailView.miniTrackView.alpha = 1
-                        self.trackDetailView.maximizedStackView.alpha = 0
+            self.view.layoutIfNeeded()
+            self.tabBar.alpha = 1
+            self.trackDetailView.miniTrackView.alpha = 1
+            self.trackDetailView.maximizedStackView.alpha = 0
         }
     }
 }

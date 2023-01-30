@@ -10,26 +10,26 @@ import UIKit
 import SwiftUI
 
 enum Search {
-   
-  enum Model {
-    struct Request {
-      enum RequestType {
-          case getTracks(searchTerm: String)
-      }
+    
+    enum Model {
+        struct Request {
+            enum RequestType {
+                case getTracks(searchTerm: String)
+            }
+        }
+        struct Response {
+            enum ResponseType {
+                case presentTracks(searchResponse: SearchResponse?)
+                case presentFooterView
+            }
+        }
+        struct ViewModel {
+            enum ViewModelData {
+                case displayTracks(searchViewModel: SearchViewModel)
+                case displayFooterView
+            }
+        }
     }
-    struct Response {
-      enum ResponseType {
-          case presentTracks(searchResponse: SearchResponse?)
-          case presentFooterView
-      }
-    }
-    struct ViewModel {
-      enum ViewModelData {
-          case displayTracks(searchViewModel: SearchViewModel)
-          case displayFooterView
-      }
-    }
-  }
 }
 
 class SearchViewModel: NSObject, NSCoding {

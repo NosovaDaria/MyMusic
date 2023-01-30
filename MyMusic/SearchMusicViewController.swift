@@ -21,7 +21,7 @@ class SearchMusicViewController: UITableViewController {
     let searchController = UISearchController(searchResultsController: nil)
     
     var tracks = [Track]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,14 +37,14 @@ class SearchMusicViewController: UITableViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.searchBar.delegate = self
     }
-
+    
     // MARK: - Table view data source
-
-
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tracks.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
         let track = tracks[indexPath.row]
@@ -64,7 +64,7 @@ extension SearchMusicViewController: UISearchBarDelegate {
                 self?.tracks = searchResults?.results ?? []
                 self?.tableView.reloadData()
             }
-    
+            
         })
     }
 }
