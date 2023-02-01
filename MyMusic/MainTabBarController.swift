@@ -72,7 +72,7 @@ class MainTabBarController: UITabBarController {
         bottomAnchorConstraint.isActive = true
         
         maximizedTopAnchorConstraint.isActive = true
-        //        trackDetailView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+   
         trackDetailView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         trackDetailView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         

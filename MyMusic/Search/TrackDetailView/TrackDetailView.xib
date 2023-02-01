@@ -45,9 +45,10 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="lqq-7P-hEK"/>
                                     </constraints>
-                                    <color key="tintColor" systemColor="labelColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="play" imagePadding="0.0"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="play">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                    </state>
                                     <connections>
                                         <action selector="playPauseAction:" destination="1qg-kn-r5q" eventType="touchUpInside" id="5D3-oP-Erv"/>
                                     </connections>
@@ -57,9 +58,11 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="48" id="b5Q-aV-faH"/>
                                     </constraints>
-                                    <color key="tintColor" systemColor="labelColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="Right"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="Right">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                    </state>
                                     <connections>
                                         <action selector="nextTrack:" destination="1qg-kn-r5q" eventType="touchUpInside" id="YTR-EL-JxT"/>
                                     </connections>
@@ -148,25 +151,34 @@
                             <rect key="frame" x="0.0" y="479.33333333333343" width="330" height="236.66666666666669"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK3-C4-S7G">
-                                    <rect key="frame" x="0.0" y="101.33333333333326" width="110" height="34"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="Left"/>
+                                    <rect key="frame" x="0.0" y="108.33333333333326" width="110" height="20"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="Left">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                    </state>
                                     <connections>
                                         <action selector="previousTrack:" destination="1qg-kn-r5q" eventType="touchUpInside" id="h3f-qH-I5J"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9i-t4-dsv">
-                                    <rect key="frame" x="110" y="92.333333333333258" width="110" height="52"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="pause"/>
+                                    <rect key="frame" x="110" y="99.333333333333258" width="110" height="38"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="pause">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                    </state>
                                     <connections>
                                         <action selector="playPauseAction:" destination="1qg-kn-r5q" eventType="touchUpInside" id="nFj-kp-5m1"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68v-2r-mla">
-                                    <rect key="frame" x="220" y="101.33333333333326" width="110" height="34"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="Right"/>
+                                    <rect key="frame" x="220" y="108.33333333333326" width="110" height="20"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="Right">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                    </state>
                                     <connections>
                                         <action selector="nextTrack:" destination="1qg-kn-r5q" eventType="touchUpInside" id="Suq-3a-zvU"/>
                                     </connections>
