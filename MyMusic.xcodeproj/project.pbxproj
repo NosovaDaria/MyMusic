@@ -19,6 +19,10 @@
 		4B61EB222959A9BD005EF3CF /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61EB212959A9BD005EF3CF /* UIViewController + Storyboard.swift */; };
 		4B61EB26295AEABE005EF3CF /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B61EB25295AEABE005EF3CF /* TrackCell.xib */; };
 		4B61EB28295AEAE1005EF3CF /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61EB27295AEAE1005EF3CF /* TrackCell.swift */; };
+		4B70B2F929705F6C004FD08D /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70B2F829705F6C004FD08D /* Nib.swift */; };
+		4B70B2FB2982C57A004FD08D /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70B2FA2982C57A004FD08D /* Library.swift */; };
+		4B70B2FE29852687004FD08D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70B2FD29852687004FD08D /* UserDefaults.swift */; };
+		4B70B30129852FA7004FD08D /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4B70B30029852FA7004FD08D /* URLImage */; };
 		4BDE2D82295D9D4100C67496 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDE2D81295D9D4100C67496 /* FooterView.swift */; };
 		4BDE2D85295EE2E700C67496 /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BDE2D84295EE2E700C67496 /* TrackDetailView.xib */; };
 		4BDE2D87295EE30500C67496 /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDE2D86295EE30500C67496 /* TrackDetailView.swift */; };
@@ -48,6 +52,9 @@
 		4B61EB212959A9BD005EF3CF /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
 		4B61EB25295AEABE005EF3CF /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		4B61EB27295AEAE1005EF3CF /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		4B70B2F829705F6C004FD08D /* Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
+		4B70B2FA2982C57A004FD08D /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		4B70B2FD29852687004FD08D /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		4BDE2D81295D9D4100C67496 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		4BDE2D84295EE2E700C67496 /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
 		4BDE2D86295EE30500C67496 /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B70B30129852FA7004FD08D /* URLImage in Frameworks */,
 				B000FC9D2ACAC313C186079A /* Pods_MyMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +125,7 @@
 			children = (
 				4B61EB212959A9BD005EF3CF /* UIViewController + Storyboard.swift */,
 				4BDE2DB029671BC100C67496 /* CMTime + Extension.swift */,
+				4B70B2F829705F6C004FD08D /* Nib.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 			children = (
 				4B61EB25295AEABE005EF3CF /* TrackCell.xib */,
 				4B61EB27295AEAE1005EF3CF /* TrackCell.swift */,
+				4B70B2FD29852687004FD08D /* UserDefaults.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -171,10 +181,11 @@
 				4BFBAAB728213CC9004FFE5A /* AppDelegate.swift */,
 				4BFBAAB928213CC9004FFE5A /* SceneDelegate.swift */,
 				4B61EB1029598C73005EF3CF /* Services */,
+				4BFBAACB28213D37004FFE5A /* MainTabBarController.swift */,
+				4B70B2FA2982C57A004FD08D /* Library.swift */,
 				4B61EB0129598C09005EF3CF /* Search */,
 				4BFBAACD28213FDA004FFE5A /* SearchMusicViewController.swift */,
 				4BFBAABB28213CC9004FFE5A /* ViewController.swift */,
-				4BFBAACB28213D37004FFE5A /* MainTabBarController.swift */,
 				4B61EB232959A9C7005EF3CF /* Helpers */,
 				4BFBAABD28213CC9004FFE5A /* Main.storyboard */,
 				4BFBAAC028213CC9004FFE5A /* Assets.xcassets */,
@@ -219,6 +230,9 @@
 			dependencies = (
 			);
 			name = MyMusic;
+			packageProductDependencies = (
+				4B70B30029852FA7004FD08D /* URLImage */,
+			);
 			productName = MyMusic;
 			productReference = 4BFBAAB428213CC9004FFE5A /* MyMusic.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +261,9 @@
 				Base,
 			);
 			mainGroup = 4BFBAAAB28213CC9004FFE5A;
+			packageReferences = (
+				4B70B2FF29852FA7004FD08D /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 4BFBAAB528213CC9004FFE5A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -324,9 +341,11 @@
 				4BFBAABC28213CC9004FFE5A /* ViewController.swift in Sources */,
 				4B3407C22940C6F900158B20 /* SearchResponse.swift in Sources */,
 				4B61EB1D29598D48005EF3CF /* SearchInteractor.swift in Sources */,
+				4B70B2FE29852687004FD08D /* UserDefaults.swift in Sources */,
 				4BDE2D82295D9D4100C67496 /* FooterView.swift in Sources */,
 				4BDE2DB129671BC100C67496 /* CMTime + Extension.swift in Sources */,
 				4B61EB28295AEAE1005EF3CF /* TrackCell.swift in Sources */,
+				4B70B2F929705F6C004FD08D /* Nib.swift in Sources */,
 				4B2D3B0C29410FAA001A1E02 /* NetworkManager.swift in Sources */,
 				4BFBAAB828213CC9004FFE5A /* AppDelegate.swift in Sources */,
 				4B61EB1929598D48005EF3CF /* SearchWorker.swift in Sources */,
@@ -335,6 +354,7 @@
 				4B61EB1B29598D48005EF3CF /* SearchModels.swift in Sources */,
 				4BFBAACC28213D37004FFE5A /* MainTabBarController.swift in Sources */,
 				4B61EB1829598D48005EF3CF /* SearchPresenter.swift in Sources */,
+				4B70B2FB2982C57A004FD08D /* Library.swift in Sources */,
 				4BDE2D87295EE30500C67496 /* TrackDetailView.swift in Sources */,
 				4BFBAABA28213CC9004FFE5A /* SceneDelegate.swift in Sources */,
 			);
@@ -560,6 +580,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B70B2FF29852FA7004FD08D /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B70B30029852FA7004FD08D /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B70B2FF29852FA7004FD08D /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4BFBAAAC28213CC9004FFE5A /* Project object */;
 }
